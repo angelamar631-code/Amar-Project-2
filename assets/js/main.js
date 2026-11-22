@@ -15,6 +15,7 @@
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
+    if (!selectBody || !selectHeader) return;
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
@@ -97,31 +98,36 @@
    * Animation on scroll function and init
    */
   function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+    if (window.AOS) {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
   }
   window.addEventListener('load', aosInit);
 
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (window.GLightbox) {
+    GLightbox({ selector: '.glightbox' });
+  }
 
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (window.PureCounter) {
+    new PureCounter();
+  }
 
   /**
    * Init swiper sliders
    */
   function initSwiper() {
+    if (!window.Swiper) return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
