@@ -2384,3 +2384,845 @@ img {
     font-size: 39px;
   }
 }
+
+/*--------------------------------------------------------------
+# Kabankalan Catholic College Homepage
+--------------------------------------------------------------*/
+.kcc-page {
+  --kcc-navy: #102b4e;
+  --kcc-gold: #d4af37;
+  --kcc-light: #f4f6f8;
+  --kcc-text: #4d5967;
+  --kcc-heading: #102b4e;
+  color: var(--kcc-text);
+  background: #ffffff;
+}
+
+.kcc-page h1,
+.kcc-page h2,
+.kcc-page h3,
+.kcc-page h4,
+.kcc-page h5,
+.kcc-page h6 {
+  color: var(--kcc-heading);
+  font-family: "Poppins", sans-serif;
+}
+
+.kcc-header {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(16, 43, 78, 0.08);
+  z-index: 1030;
+  transition: box-shadow 0.3s ease;
+}
+
+.kcc-header.scrolled,
+.scrolled .kcc-header {
+  box-shadow: 0 8px 30px rgba(16, 43, 78, 0.1);
+}
+
+.kcc-header .navbar {
+  min-height: 82px;
+  padding: 10px 0;
+}
+
+.kcc-header .navbar-brand {
+  gap: 10px;
+  margin-right: 20px;
+  color: var(--kcc-navy) !important;
+  line-height: 1.1;
+}
+
+.kcc-header .navbar-brand img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.kcc-header .navbar-brand span {
+  display: flex;
+  flex-direction: column;
+}
+
+.kcc-header .navbar-brand strong {
+  max-width: 190px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.kcc-header .navbar-brand small {
+  margin-top: 4px;
+  color: #718096;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.kcc-header .nav-link {
+  margin: 0 7px;
+  padding: 8px 4px !important;
+  color: #344054;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.kcc-header .nav-link:hover,
+.kcc-header .nav-link.active {
+  color: var(--kcc-gold) !important;
+}
+
+.kcc-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.kcc-btn {
+  border-radius: 4px;
+  padding: 12px 22px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.kcc-btn-gold {
+  border: 2px solid var(--kcc-gold);
+  background: var(--kcc-gold);
+  color: var(--kcc-navy) !important;
+}
+
+.kcc-btn-gold:hover {
+  border-color: #e1c15b;
+  background: #e1c15b;
+  color: var(--kcc-navy) !important;
+  transform: translateY(-2px);
+}
+
+.kcc-btn-navy {
+  border: 2px solid var(--kcc-navy);
+  background: var(--kcc-navy);
+  color: #ffffff !important;
+}
+
+.kcc-btn-navy:hover {
+  border-color: var(--kcc-gold);
+  background: var(--kcc-gold);
+  color: var(--kcc-navy) !important;
+  transform: translateY(-2px);
+}
+
+.kcc-btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: transparent;
+  color: #ffffff !important;
+}
+
+.kcc-btn-outline:hover {
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--kcc-navy) !important;
+  transform: translateY(-2px);
+}
+
+.kcc-hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: url("../img/logo/KCC-Building.jpg") center 58% / cover no-repeat;
+  color: #ffffff;
+}
+
+.kcc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 31, 57, 0.96) 0%, rgba(10, 31, 57, 0.82) 48%, rgba(10, 31, 57, 0.28) 100%);
+}
+
+.kcc-hero h1 {
+  max-width: 780px;
+  margin: 10px 0 22px;
+  color: #ffffff;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.kcc-hero h1 span {
+  color: var(--kcc-gold);
+}
+
+.kcc-hero-text {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.kcc-eyebrow {
+  margin-bottom: 10px;
+  color: #b18b16;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.kcc-section {
+  padding: 100px 0;
+  scroll-margin-top: 82px;
+}
+
+.kcc-section-light {
+  background: var(--kcc-light);
+}
+
+.kcc-section-title {
+  margin: 8px 0 20px;
+  color: var(--kcc-navy);
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.kcc-lead {
+  color: #27384a;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.kcc-about-image {
+  position: relative;
+}
+
+.kcc-about-image img {
+  width: 100%;
+  min-height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px rgba(16, 43, 78, 0.14);
+}
+
+.kcc-image-badge {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+  background: var(--kcc-gold);
+  color: var(--kcc-navy);
+  text-align: center;
+}
+
+.kcc-image-badge span {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.kcc-image-badge strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+}
+
+.kcc-highlights {
+  display: grid;
+  gap: 13px;
+  margin-top: 24px;
+}
+
+.kcc-highlight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.kcc-highlight i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.16);
+  color: #9a7810;
+  font-size: 20px;
+}
+
+.kcc-highlight div {
+  display: flex;
+  flex-direction: column;
+}
+
+.kcc-highlight strong {
+  color: var(--kcc-navy);
+  font-family: "Poppins", sans-serif;
+}
+
+.kcc-highlight span {
+  font-size: 14px;
+}
+
+.kcc-section-heading {
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.kcc-section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+.kcc-program-card {
+  padding: 38px 32px;
+  border: 1px solid #e7ebef;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.kcc-program-card:hover {
+  border-color: rgba(212, 175, 55, 0.65);
+  box-shadow: 0 18px 45px rgba(16, 43, 78, 0.1);
+  transform: translateY(-7px);
+}
+
+.kcc-program-icon {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background: var(--kcc-navy);
+  color: var(--kcc-gold);
+  font-size: 28px;
+}
+
+.kcc-card-label {
+  color: #9a7810;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.kcc-program-card h3 {
+  margin: 8px 0 14px;
+  font-size: 22px;
+}
+
+.kcc-program-card a,
+.kcc-text-link {
+  color: var(--kcc-navy);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.kcc-program-card a i,
+.kcc-text-link i {
+  margin-left: 5px;
+  transition: 0.2s ease;
+}
+
+.kcc-program-card a:hover i,
+.kcc-text-link:hover i {
+  margin-left: 10px;
+}
+
+.kcc-campus-feature {
+  height: 100%;
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.kcc-campus-feature img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+}
+
+.kcc-campus-feature::after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(transparent, rgba(10, 31, 57, 0.82));
+}
+
+.kcc-campus-caption {
+  position: absolute;
+  z-index: 2;
+  left: 36px;
+  bottom: 30px;
+  color: #ffffff;
+}
+
+.kcc-campus-caption p {
+  margin: 0 0 5px;
+  color: var(--kcc-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.kcc-campus-caption h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.kcc-campus-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px;
+  border-radius: 8px;
+  background: var(--kcc-navy);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.kcc-campus-panel .kcc-eyebrow {
+  color: var(--kcc-gold);
+}
+
+.kcc-campus-panel .kcc-section-title {
+  color: #ffffff;
+  font-size: 38px;
+}
+
+.kcc-check-list {
+  padding: 0;
+  margin: 18px 0 25px;
+  list-style: none;
+}
+
+.kcc-check-list li {
+  margin: 10px 0;
+}
+
+.kcc-check-list i {
+  margin-right: 8px;
+  color: var(--kcc-gold);
+}
+
+.kcc-campus-panel .kcc-text-link {
+  color: var(--kcc-gold);
+}
+
+.kcc-event-card {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--kcc-navy);
+}
+
+.kcc-event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.kcc-event-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 20%, rgba(10, 31, 57, 0.92));
+}
+
+.kcc-event-card:hover img {
+  transform: scale(1.04);
+}
+
+.kcc-event-content {
+  position: absolute;
+  z-index: 2;
+  left: 30px;
+  right: 30px;
+  bottom: 28px;
+  color: #ffffff;
+}
+
+.kcc-event-content p {
+  color: var(--kcc-gold);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.kcc-event-content h3 {
+  margin: 8px 0 14px;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.kcc-event-content a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.kcc-admissions {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.kcc-admissions-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px 60px;
+  border-left: 6px solid var(--kcc-gold);
+  border-radius: 8px;
+  background: var(--kcc-navy);
+  color: #ffffff;
+}
+
+.kcc-admissions-inner h2 {
+  margin: 8px 0 12px;
+  color: #ffffff;
+  font-size: clamp(32px, 4vw, 46px);
+}
+
+.kcc-admissions-inner p:last-child {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.kcc-admissions-inner .kcc-btn {
+  flex: 0 0 auto;
+}
+
+.kcc-contact-section {
+  border-top: 1px solid #edf0f2;
+  background: #fafbfc;
+}
+
+.kcc-contact-card {
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid #e8ecf0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--kcc-text);
+  transition: 0.25s ease;
+}
+
+.kcc-contact-card:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  color: var(--kcc-text);
+  transform: translateY(-4px);
+}
+
+.kcc-contact-card > i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(16, 43, 78, 0.08);
+  color: var(--kcc-navy);
+  font-size: 20px;
+}
+
+.kcc-contact-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.kcc-contact-card span {
+  color: #7b8794;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.kcc-contact-card strong {
+  margin-top: 3px;
+  color: var(--kcc-navy);
+  font-size: 14px;
+}
+
+.kcc-footer {
+  padding: 70px 0 20px;
+  background: #091e38;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.kcc-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+}
+
+.kcc-footer-brand img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.kcc-footer-brand div {
+  display: flex;
+  flex-direction: column;
+}
+
+.kcc-footer-brand strong {
+  max-width: 250px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.kcc-footer-brand span {
+  color: var(--kcc-gold);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.kcc-footer h3 {
+  margin-bottom: 18px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.kcc-footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.kcc-footer ul li {
+  margin: 9px 0;
+}
+
+.kcc-footer a {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.kcc-footer a:hover {
+  color: var(--kcc-gold);
+}
+
+.kcc-footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.kcc-footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.kcc-scroll-top {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1020;
+  right: 18px;
+  bottom: 18px;
+  border-radius: 50%;
+  background: var(--kcc-navy);
+  color: #ffffff !important;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.kcc-scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 1199.98px) {
+  .kcc-header .navbar-brand strong {
+    max-width: none;
+  }
+
+  .kcc-header .navbar-collapse {
+    margin-top: 10px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(16, 43, 78, 0.12);
+  }
+
+  .kcc-header .nav-link {
+    padding: 10px 4px !important;
+  }
+
+  .kcc-header .kcc-btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .kcc-section {
+    padding: 75px 0;
+  }
+
+  .kcc-hero {
+    min-height: 580px;
+  }
+
+  .kcc-about-image {
+    margin-bottom: 15px;
+  }
+
+  .kcc-campus-panel {
+    min-height: 440px;
+  }
+
+  .kcc-admissions-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcc-header .navbar {
+    min-height: 72px;
+  }
+
+  .kcc-header .navbar-brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .kcc-header .navbar-brand strong {
+    max-width: 175px;
+    font-size: 13px;
+  }
+
+  .kcc-hero {
+    min-height: 540px;
+    background-position: 62% center;
+  }
+
+  .kcc-hero-overlay {
+    background: rgba(10, 31, 57, 0.82);
+  }
+
+  .kcc-hero h1 {
+    font-size: 42px;
+  }
+
+  .kcc-hero-text {
+    font-size: 16px;
+  }
+
+  .kcc-section {
+    padding: 65px 0;
+  }
+
+  .kcc-section-title {
+    font-size: 34px;
+  }
+
+  .kcc-about-image img {
+    min-height: 360px;
+  }
+
+  .kcc-image-badge {
+    right: 12px;
+    bottom: -20px;
+    width: 112px;
+    height: 112px;
+  }
+
+  .kcc-campus-feature,
+  .kcc-campus-feature img {
+    min-height: 420px;
+  }
+
+  .kcc-campus-panel {
+    padding: 36px 28px;
+  }
+
+  .kcc-event-card {
+    height: 330px;
+  }
+
+  .kcc-admissions {
+    padding: 65px 0;
+  }
+
+  .kcc-admissions-inner {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .kcc-header .navbar-brand small {
+    display: none;
+  }
+
+  .kcc-header .navbar-brand strong {
+    max-width: 150px;
+  }
+
+  .kcc-hero h1 {
+    font-size: 38px;
+  }
+
+  .kcc-hero .kcc-btn {
+    width: 100%;
+  }
+
+  .kcc-about-image img {
+    min-height: 300px;
+  }
+
+  .kcc-image-badge {
+    width: 96px;
+    height: 96px;
+  }
+
+  .kcc-image-badge strong {
+    font-size: 22px;
+  }
+
+  .kcc-campus-caption {
+    left: 24px;
+  }
+
+  .kcc-campus-caption h3 {
+    font-size: 26px;
+  }
+
+  .kcc-event-card {
+    height: 300px;
+  }
+
+  .kcc-admissions-inner h2 {
+    font-size: 32px;
+  }
+}
