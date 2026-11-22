@@ -2246,145 +2246,6 @@ section,
 }
 
 
-:root {
-  --kcc-navy: #102b4e;
-  --kcc-gold: #d4af37;
-  --kcc-light: #f5f7fa;
-}
-
-/* General */
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #343a40;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 85px;
-}
-
-/* Navbar */
-.navbar {
-  padding: 14px 0;
-}
-
-.navbar-brand {
-  color: var(--kcc-navy) !important;
-  font-size: 22px;
-}
-
-.nav-link {
-  font-weight: 600;
-  color: #344054;
-  margin: 0 7px;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--kcc-gold) !important;
-}
-
-/* Buttons */
-.btn-kcc {
-  background: var(--kcc-navy);
-  color: white;
-  border: 2px solid var(--kcc-navy);
-  border-radius: 6px;
-  padding: 11px 25px;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-kcc:hover {
-  background: var(--kcc-gold);
-  border-color: var(--kcc-gold);
-  color: var(--kcc-navy);
-}
-
-/* Hero */
-.hero-section {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 29, 53, 0.92),
-      rgba(8, 29, 53, 0.45)
-    ),
-    url("../img/logo/KCC-Building.jpg")
-    center/cover no-repeat;
-  color: white;
-}
-
-.hero-label,
-.section-label {
-  color: var(--kcc-gold);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.hero-section h1 {
-  color: white;
-  font-size: clamp(40px, 6vw, 68px);
-  font-weight: 800;
-  line-height: 1.15;
-  margin: 20px 0;
-}
-
-.hero-section h1 span {
-  color: var(--kcc-gold);
-}
-
-.hero-section p {
-  max-width: 550px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #e5eaf0;
-}
-
-/* Section headings */
-.section-title {
-  color: var(--kcc-navy);
-  font-size: clamp(28px, 4vw, 40px);
-  font-weight: 800;
-  margin: 15px 0;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-}
-
-@media (max-width: 991px) {
-  .hero-section {
-    min-height: 570px;
-    text-align: center;
-  }
-
-  .hero-section p {
-    margin: auto auto 25px;
-  }
-
-  .navbar-nav {
-    padding: 15px 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    min-height: 520px;
-  }
-
-  .hero-section h1 {
-    font-size: 39px;
-  }
-}
-
 /*--------------------------------------------------------------
 # Kabankalan Catholic College Homepage
 --------------------------------------------------------------*/
@@ -3224,5 +3085,437 @@ img {
 
   .kcc-admissions-inner h2 {
     font-size: 32px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Premium Homepage Refinements
+--------------------------------------------------------------*/
+.kcc-page {
+  --kcc-navy: #0d2a4d;
+  --kcc-navy-deep: #081d36;
+  --kcc-gold: #c9a227;
+  --kcc-gold-bright: #dcb84b;
+  --kcc-light: #f5f7fa;
+  --kcc-text: #566474;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kcc-page .container {
+  max-width: 1140px;
+}
+
+.kcc-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(13, 42, 77, 0.07);
+}
+
+.kcc-header .navbar {
+  min-height: 88px;
+  padding: 12px 0;
+}
+
+.kcc-header .navbar-brand strong {
+  letter-spacing: -0.2px;
+}
+
+.kcc-header .nav-link {
+  position: relative;
+  margin: 0 8px;
+  color: #304255;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+}
+
+.kcc-header .nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 4px;
+  bottom: 2px;
+  background: var(--kcc-gold);
+  transition: width 0.25s ease;
+}
+
+.kcc-header .nav-link:hover::after,
+.kcc-header .nav-link.active::after {
+  width: calc(100% - 8px);
+}
+
+.kcc-btn {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  letter-spacing: 0.15px;
+  box-shadow: 0 8px 22px rgba(13, 42, 77, 0.08);
+}
+
+.kcc-hero {
+  min-height: 680px;
+  background-position: center 54%;
+}
+
+.kcc-hero::after {
+  content: "";
+  width: 120px;
+  height: 5px;
+  position: absolute;
+  left: calc((100vw - min(1140px, 100vw - 48px)) / 2);
+  bottom: 0;
+  background: var(--kcc-gold);
+}
+
+.kcc-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(7, 29, 54, 0.97) 0%, rgba(7, 29, 54, 0.86) 43%, rgba(7, 29, 54, 0.35) 78%, rgba(7, 29, 54, 0.18) 100%);
+}
+
+.kcc-hero h1 {
+  max-width: 720px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  letter-spacing: -3px;
+}
+
+.kcc-hero-text {
+  max-width: 590px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.kcc-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #a27c10;
+  letter-spacing: 2.4px;
+}
+
+.kcc-eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  flex: 0 0 28px;
+  background: var(--kcc-gold);
+}
+
+.kcc-hero .kcc-eyebrow::before,
+.kcc-admissions-inner .kcc-eyebrow::before,
+.kcc-campus-panel .kcc-eyebrow::before {
+  background: var(--kcc-gold-bright);
+}
+
+.kcc-section {
+  padding: 112px 0;
+  position: relative;
+  scroll-margin-top: 88px;
+}
+
+.kcc-section-light {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(201, 162, 39, 0.07), transparent 25%),
+    var(--kcc-light);
+}
+
+.kcc-section-title {
+  max-width: 760px;
+  margin: 10px 0 22px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+}
+
+.kcc-lead {
+  max-width: 580px;
+  color: #314255;
+  font-size: 17px;
+}
+
+.kcc-about-image {
+  padding: 0 18px 18px 0;
+}
+
+.kcc-about-image::before {
+  content: "";
+  width: 78%;
+  height: 78%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(201, 162, 39, 0.48);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.kcc-about-image img {
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+  border-radius: 4px;
+  object-position: center 58%;
+}
+
+.kcc-image-badge {
+  z-index: 2;
+  border-width: 5px;
+  box-shadow: 0 12px 30px rgba(13, 42, 77, 0.16);
+}
+
+.kcc-highlights {
+  gap: 17px;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid #e8ecf0;
+}
+
+.kcc-highlight i {
+  border: 1px solid rgba(201, 162, 39, 0.16);
+  background: #f8f4e8;
+  color: #9b7812;
+}
+
+.kcc-section-heading {
+  max-width: 680px;
+  margin-bottom: 54px;
+}
+
+.kcc-section-heading .kcc-eyebrow {
+  justify-content: center;
+}
+
+.kcc-section-heading .kcc-eyebrow::before {
+  display: none;
+}
+
+.kcc-program-card {
+  border: 0;
+  border-top: 3px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 12px 38px rgba(13, 42, 77, 0.07);
+}
+
+.kcc-program-card:hover {
+  border-top-color: var(--kcc-gold);
+  box-shadow: 0 22px 50px rgba(13, 42, 77, 0.12);
+  transform: translateY(-8px);
+}
+
+.kcc-program-icon {
+  width: 68px;
+  height: 68px;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 50%;
+  background: var(--kcc-navy);
+  box-shadow: 0 10px 24px rgba(13, 42, 77, 0.14);
+}
+
+.kcc-campus-feature,
+.kcc-campus-feature img {
+  min-height: 540px;
+  border-radius: 4px;
+}
+
+.kcc-campus-feature img {
+  object-position: center;
+}
+
+.kcc-campus-panel {
+  min-height: 540px;
+  border-radius: 4px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.03), transparent),
+    var(--kcc-navy);
+}
+
+.kcc-campus-panel .kcc-section-title {
+  max-width: 430px;
+}
+
+.kcc-event-card {
+  height: 390px;
+  border-radius: 4px;
+  box-shadow: 0 15px 38px rgba(13, 42, 77, 0.1);
+}
+
+.kcc-event-card::after {
+  background: linear-gradient(180deg, rgba(7, 29, 54, 0.05) 15%, rgba(7, 29, 54, 0.88) 100%);
+}
+
+.kcc-event-content {
+  left: 36px;
+  right: 36px;
+  bottom: 32px;
+}
+
+.kcc-admissions {
+  padding: 72px 0;
+  background: #ffffff;
+}
+
+.kcc-admissions-inner {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-left: 5px solid var(--kcc-gold);
+  border-radius: 4px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(201, 162, 39, 0.13), transparent 20%),
+    var(--kcc-navy-deep);
+  box-shadow: 0 22px 55px rgba(13, 42, 77, 0.14);
+}
+
+.kcc-admissions-inner::after {
+  content: "";
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  right: -85px;
+  bottom: -105px;
+  border: 1px solid rgba(201, 162, 39, 0.32);
+  border-radius: 50%;
+}
+
+.kcc-contact-section {
+  background: #fafbfc;
+}
+
+.kcc-contact-card {
+  border-radius: 4px;
+  box-shadow: 0 8px 28px rgba(13, 42, 77, 0.05);
+}
+
+.kcc-contact-card > i {
+  background: #f5f1df;
+  color: #95750f;
+}
+
+.kcc-footer {
+  background: var(--kcc-navy-deep);
+}
+
+.kcc-footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 991.98px) {
+  .kcc-section {
+    padding: 88px 0;
+  }
+
+  .kcc-hero {
+    min-height: 620px;
+  }
+
+  .kcc-about-image img {
+    min-height: 460px;
+  }
+
+  .kcc-campus-feature,
+  .kcc-campus-feature img,
+  .kcc-campus-panel {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .kcc-header .navbar {
+    min-height: 76px;
+  }
+
+  .kcc-hero {
+    min-height: 560px;
+  }
+
+  .kcc-hero::after {
+    left: 24px;
+  }
+
+  .kcc-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .kcc-section {
+    padding: 76px 0;
+  }
+
+  .kcc-section-title {
+    letter-spacing: -1.2px;
+  }
+
+  .kcc-about-image {
+    padding: 0 10px 10px 0;
+  }
+
+  .kcc-about-image img {
+    min-height: 380px;
+  }
+
+  .kcc-campus-feature,
+  .kcc-campus-feature img,
+  .kcc-campus-panel {
+    min-height: 440px;
+  }
+
+  .kcc-event-card {
+    height: 350px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .kcc-page .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .kcc-hero {
+    min-height: 520px;
+  }
+
+  .kcc-hero h1 {
+    font-size: 36px;
+  }
+
+  .kcc-hero-text {
+    font-size: 15px;
+  }
+
+  .kcc-section {
+    padding: 68px 0;
+  }
+
+  .kcc-about-image img {
+    min-height: 320px;
+  }
+
+  .kcc-image-badge {
+    right: 4px;
+  }
+
+  .kcc-program-card {
+    padding: 32px 26px;
+  }
+
+  .kcc-campus-feature,
+  .kcc-campus-feature img,
+  .kcc-campus-panel {
+    min-height: 400px;
+  }
+
+  .kcc-campus-panel {
+    padding: 32px 24px;
+  }
+
+  .kcc-event-card {
+    height: 320px;
+  }
+
+  .kcc-event-content {
+    left: 24px;
+    right: 24px;
   }
 }
