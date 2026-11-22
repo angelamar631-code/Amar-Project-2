@@ -2244,3 +2244,143 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+:root {
+  --kcc-navy: #102b4e;
+  --kcc-gold: #d4af37;
+  --kcc-light: #f5f7fa;
+}
+
+/* General */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #343a40;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 85px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 14px 0;
+}
+
+.navbar-brand {
+  color: var(--kcc-navy) !important;
+  font-size: 22px;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #344054;
+  margin: 0 7px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--kcc-gold) !important;
+}
+
+/* Buttons */
+.btn-kcc {
+  background: var(--kcc-navy);
+  color: white;
+  border: 2px solid var(--kcc-navy);
+  border-radius: 6px;
+  padding: 11px 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-kcc:hover {
+  background: var(--kcc-gold);
+  border-color: var(--kcc-gold);
+  color: var(--kcc-navy);
+}
+
+/* Hero */
+.hero-section {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 29, 53, 0.92),
+      rgba(8, 29, 53, 0.45)
+    ),
+    url("../img/logo/KCC-Building.jpg")
+    center/cover no-repeat;
+  color: white;
+}
+
+.hero-label,
+.section-label {
+  color: var(--kcc-gold);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 20px 0;
+}
+
+.hero-section h1 span {
+  color: var(--kcc-gold);
+}
+
+.hero-section p {
+  max-width: 550px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e5eaf0;
+}
+
+/* Section headings */
+.section-title {
+  color: var(--kcc-navy);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 570px;
+    text-align: center;
+  }
+
+  .hero-section p {
+    margin: auto auto 25px;
+  }
+
+  .navbar-nav {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    min-height: 520px;
+  }
+
+  .hero-section h1 {
+    font-size: 39px;
+  }
+}
